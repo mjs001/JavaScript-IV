@@ -82,14 +82,14 @@ Prototype Refactor
         this.hp = greatGrandAttributes.hp
         }
         Damage(char){
-        return `${this.name} attacks ${char.name} with a ${this.weapons} and did ${this.damage} damage to the Hero! The hero now has ${char.hp-this.damage} health.`
+        return `${this.name} attacks ${char.name} with a ${this.weapons} and did ${this.damage} damage to the Hero! The hero now has ${char.hp = char.hp-this.damage} health.`
         }
         Destruction(char1, char2){
         if (this.hp <= 0){
             return `${this.name} has 0 hp! ${this.name} is now unconscious.`
-        }else if (this.hp < 5){
+        }else if (this.hp <= 5){
             return `${this.name} has ${this.hp}! They are very low on health!`
-        }else { return `currently ${char1.name} has ${char1.hp -char2.damage} health`}
+        }else { return `${char1.name} glares at ${char2.name}`}
         
         }
     };   
@@ -103,14 +103,14 @@ Prototype Refactor
         this.hp = greatGreatGrandAttributes.hp
         }
         Damage(char){
-        return `${this.name} attacks ${char.name} with a ${this.weapons} and did ${this.damage} damage to the Villian! The Villian now has ${char.hp-this.damage} health.`
+        return `${this.name} attacks ${char.name} with a ${this.weapons} and did ${this.damage} damage to the Villian! The Villian now has ${char.hp= char.hp-this.damage} health.`
         }
         Destruction(char1, char2){
         if (this.hp <= 0){
             return `${this.name} has 0 hp! ${this.name} is now unconscious.`
-        }else if (this.hp < 5){
+        }else if (this.hp <= 5){
             return `${this.name} has ${this.hp}! They are very low on health!`
-        }else { return `currently ${char1.name} has ${char1.hp -char2.damage} health`}
+        }else { return `${char1.name} glares at ${char2.name}`}
         
         }
     };  
@@ -201,7 +201,33 @@ Prototype Refactor
     console.log(Snyder.Destruction(Stan, Snyder));
     console.log(Stan.Damage(Snyder));
     console.log(Stan.Destruction(Snyder, Stan));
-  
+    console.log(Snyder.Damage(Stan));
+    console.log(Snyder.Destruction(Stan, Snyder));
+    console.log(Stan.Damage(Snyder));
+    console.log(Stan.Destruction(Snyder, Stan));
+    console.log(Snyder.Damage(Stan));
+    console.log(Snyder.Destruction(Stan, Snyder));
+    console.log(Stan.Damage(Snyder));
+    console.log(Stan.Destruction(Snyder, Stan));
+    console.log(Snyder.Damage(Stan));
+    console.log(Snyder.Destruction(Stan, Snyder));
+    console.log(Stan.Damage(Snyder));
+    console.log(Stan.Destruction(Snyder, Stan));
+    console.log(Snyder.Damage(Stan));
+    console.log(Snyder.Destruction(Stan, Snyder));
+    console.log(Stan.Damage(Snyder));
+    console.log(Stan.Destruction(Snyder, Stan));
+    console.log(Snyder.Damage(Stan));
+    console.log(Snyder.Destruction(Stan, Snyder));
+    console.log(Stan.Damage(Snyder));
+    console.log(Stan.Destruction(Snyder, Stan));
+    console.log(Snyder.Damage(Stan));
+    console.log(Stan.Destruction(Stan));
+    console.log(Stan.Damage(Snyder));
+    console.log(Stan.Destruction(Snyder, Stan));
+    console.log(Snyder.Damage(Stan));
+    console.log(Stan.Destruction(Stan));
+    
     // Stretch task: 
     // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
     // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
