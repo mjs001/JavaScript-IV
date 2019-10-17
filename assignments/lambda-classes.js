@@ -1,4 +1,5 @@
 // CODE here for your Lambda Classes
+
 //classes:
 
 class person{
@@ -60,3 +61,71 @@ class ProjectManager extends instructor{
     }
 };
 
+//objects
+
+//instructors:
+
+let Billy = new instructor({
+    name: 'Billy',
+    age: 42,
+    location: 'Israel',
+    favLanguage: 'C',
+    specialty: 'Javascript Frameworks',
+    catchPhrase: `let's get shwifty!`
+});
+
+let Rin = new instructor({
+    name: 'Rin',
+    age: 48,
+    location: 'France',
+    favLanguage: 'C++',
+    specialty: 'Node',
+    catchPhrase: `Come on guuuuys!`
+});
+
+//students:
+
+let Rachel = new student({
+    name: 'Rachel',
+    age: 32,
+    location: 'California',
+    previousbg: 'Janitor',
+    className: 'WEB22',
+    favSubjects: 'Javascript, Labs'
+});
+
+let Katie = new student({
+    name: 'Katie',
+    age: 32,
+    location: 'Great Britain',
+    previousbg: 'Chemical Engineer',
+    className: 'WEB25',
+    favSubjects: 'CS, Flexbox'
+    });
+
+//ProjectManager:
+
+let Jerry = new student({
+    name: 'Jerry',
+    age: 22,
+    location: 'South Korea',
+    gradClassName: 'WEB1',
+    favInstructor: 'Billy'
+});  
+
+let Karen = new student({
+    name: 'Karen',
+    age: 62,
+    location: 'Iraq',
+    gradClassName: 'WEB7',
+    favInstructor: 'Rin'
+});  
+
+//console.logs:
+
+//instructors
+console.log(Billy.speak());
+console.log(Billy.demo(Billy.specialty));
+
+console.log(Rin.speak());
+console.log(Rin.grade(Katie, 'todays project' ));
